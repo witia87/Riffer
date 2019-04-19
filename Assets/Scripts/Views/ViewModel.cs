@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
+using Assets.Scripts.World;
 
-namespace Assets.Scripts
-{
+
+namespace Assets.Scripts.Views
+{/*
     public class ViewModel: MonoBehaviour
     {
-        public static Board Board;
+        public static BoardOLD Board;
         private static Dictionary<SubstanceId, Sprite> _spritesDictionary;
 
         [Serializable]
@@ -35,5 +37,5 @@ namespace Assets.Scripts
                 _spritesDictionary.Add(substanceSprite.id, substanceSprite.sprite);
             }
         }
-    }
+    }*/
 }

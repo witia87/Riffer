@@ -1,5 +1,7 @@
-﻿namespace Assets
-{
+﻿//using Assets.Scripts.Views;
+
+namespace Assets
+{/*
     using UnityEngine;
     using UnityEditor;
 
@@ -16,5 +18,5 @@
                 gridView.Initialize();
             }
         }
-    }
+    }*/
 }
