@@ -9,6 +9,8 @@ namespace Assets.Scripts.Engine
 {
     public class Loader: MonoBehaviour
     {
+        public GameObject boardManager;
+
         public readonly int FIXED_UPDATES_PER_TICK = 30;
         private static int FIXED_UPDATES_COUNTER = 0;
         
@@ -17,6 +19,7 @@ namespace Assets.Scripts.Engine
 
         void Start()
         {
+            GameObject boardManagerGO = Instantiate(boardManager);
             _mechanics.Add(new Gravity());
             BoardManager.Instance.InitializeBoard();
             _newBoard = BoardManager.Instance.GetCurrentBoard();

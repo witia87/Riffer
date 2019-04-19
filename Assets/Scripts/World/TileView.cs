@@ -15,13 +15,13 @@ namespace Assets.Scripts.World
         public void RefreshSubstanceView(SubstanceId newSubstance)
         {
             Substance = newSubstance;
-            sprite = BoardManager.Instance.MapSprites[(int)newSubstance];
+            this.gameObject.GetComponent<SpriteRenderer>().sprite = BoardManager.Instance.MapSprites[(int)newSubstance];
+            //Debug.Log(name+" refreshed");
         }
 
         ///// MonoBehaviour Functions
         private void Awake()
         {
-            sprite = this.gameObject.GetComponent<SpriteRenderer>().sprite;
         }
     }
 }

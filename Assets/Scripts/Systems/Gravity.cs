@@ -21,8 +21,9 @@ namespace Assets.Scripts.Systems
             {
                 Tile otherTile = currentBoard.GetTile(tile.Column, tile.Row - 1);
                 if (otherTile.Substance == SubstanceId.Atmo) {
-                    Debug.Log("Swaping "+tile.Column+"/"+tile.Row +" "+tile.Substance+" » "+otherTile.Column+"/"+otherTile.Row+ " "+otherTile.Substance);
+                    Debug.Log("Swaping " + tile.Column + "/" + tile.Row + " " + tile.Substance + " » " + otherTile.Column + "/" + otherTile.Row + " " + otherTile.Substance );
                     otherTile.SwapSubstances(tile);
+                    Debug.Log("Swaped " + tile.Column + "/" + tile.Row + " " + tile.Substance + " » " + otherTile.Column + "/" + otherTile.Row + " " + otherTile.Substance );
                 }
             }
         }
