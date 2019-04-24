@@ -1,5 +1,6 @@
-﻿using System.Collections;
+﻿using System;
 using System.Collections.Generic;
+using System.Collections;
 using UnityEngine;
 
 
@@ -28,12 +29,22 @@ namespace Assets.Scripts.World
         Permanent
     }
 
+    [Serializable]
+    public struct Substance
+    {
+        public SubstanceId id;
+        public SubstanceState state;
+        public float ro;
+        public Sprite sprite;
+        
+    }
+
     public class SubstancesManager : MonoBehaviour
     {
         // Start is called before the first frame update
         void Start()
         {
-
+           
         }
 
         // Update is called once per frame

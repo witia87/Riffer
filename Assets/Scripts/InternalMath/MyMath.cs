@@ -18,18 +18,8 @@ namespace Assets.Scripts.InternalMath
         LEFT
     }
 
-    public enum SubstanceId {
-        Vacuum,
-        Air,
-        Sand,
-        Stone,
-        Rock,
-        Pyrite,
-        Zircone,
-        Red
-    }
-
-
+    
+    ///// static MyMath class
     public static class MyMath
     {
         public static NodeDirections ReverseDirection(NodeDirections outDirection)
