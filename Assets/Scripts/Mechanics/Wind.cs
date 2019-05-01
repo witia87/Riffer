@@ -1,47 +1,32 @@
-﻿using System;
-using UnityEngine;
-using Assets.Scripts.World;
+﻿using Assets.Scripts.World;
+using Assets.Scripts.World.Substances;
 
-namespace Assets.Scripts.Systems
+namespace Assets.Scripts.Mechanics
 {
-    public class Wind: Mechanics
+    public class Wind : CellularMechanics
     {
+        private readonly HorizontalDirection _windDirection = HorizontalDirection.Right;
+        private readonly float _windStrength = 1;
+        private Board _currentBoard;
 
-        ///// Variables
-        private float uniformWind = 0;
-        private Board currentBoard = null;
-
-        ///// Functions
-
-        // Mechanics.Apply abstract override
         public override void Apply(Board board)
         {
-            currentBoard = board;
-            uniformWind = BoardManager.Instance.GetCurrentWind();
-            board.ForEachWind(ApplyForTile, uniformWind);
+            _currentBoard = board;
+            board.ForEach(ApplyForTile, VerticalDirection.Up, _windDirection);
         }
 
-        // Single tile mechanics
         private void ApplyForTile(Tile tile)
         {
-            
-            if (tile.Substance == SubstanceId.Sand && 
-                tile.Row > 1 && 
-                tile.Row < 39 && 
-                uniformWind != 0f)
+            if (tile.Substance == SubstanceId.Sand &&
+                tile.Row > 1 &&
+                tile.Row < 39 &&
+                _windStrength > 0f)
             {
-
-                if (Mathf.Abs(uniformWind) >= 1)
-                {
-                    Tile neighbourTile = currentBoard.GetTile(tile.Column + Math.Sign(uniformWind), tile.Row);
-                    if (neighbourTile.Substance == SubstanceId.Atmo)
-                    {
-                        //Debug.Log(tile.Column+"/"+tile.Row+" : "+tile.Substance + " » "+neighbourTile.Column + "/" + neighbourTile.Row + " : " + neighbourTile.Substance);
-                        neighbourTile.SwapSubstances(tile);
-
-                    }
-
-                }
+                var horizontalOffset = _windDirection == HorizontalDirection.Right ? 1 : -1;
+                var neighbourTile = _currentBoard.GetTile(tile.Column + horizontalOffset, tile.Row);
+                if (neighbourTile.Substance == SubstanceId.Atmo)
+                    //Debug.Log(tile.Column+"/"+tile.Row+" : "+tile.Substance + " » "+neighbourTile.Column + "/" + neighbourTile.Row + " : " + neighbourTile.Substance);
+                    neighbourTile.SwapSubstances(tile);
                 /*
                 // LEFT WIND
                 if (uniformWind <= -1)
@@ -80,9 +65,6 @@ namespace Assets.Scripts.Systems
                     
                 }*/
             }
-
-        } // /ApplyForTile
-
-    } // /class
-
-} // /namespace
+        }
+    }
+}

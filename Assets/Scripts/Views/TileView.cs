@@ -1,28 +1,31 @@
-﻿using UnityEngine;
-using Assets.Scripts.World;
+﻿using Assets.Scripts.World;
+using Assets.Scripts.World.Substances;
+using UnityEngine;
 
 namespace Assets.Scripts.Views
 {
     public class TileView : MonoBehaviour
     {
-        ///// Variables
-        [SerializeField] private SubstanceId Substance = SubstanceId.Vacuum;
+        public int Column;
+        public int Row;
 
-        private SpriteRenderer spriteRenderer;
+        private SpriteRenderer _spriteRenderer;
+        public SubstanceId Substance = SubstanceId.Vacuum;
 
-        ///// Functions
-        public void RefreshSubstanceView(SubstanceId newSubstance)
+        public void Update()
         {
-            Substance = newSubstance;
-            spriteRenderer.sprite = ViewModel.GetSprite(newSubstance);
-            //Debug.Log(name+" refreshed");
+            var newSubstance = Board.Current.GetTile(Column, Row).Substance;
+            if (newSubstance != Substance)
+            {
+                Substance = newSubstance;
+                _spriteRenderer.sprite = ViewModel.GetSprite(newSubstance);
+            }
         }
 
-        ///// MonoBehaviour Functions
         private void Awake()
         {
-            spriteRenderer = this.gameObject.GetComponent<SpriteRenderer>();
-            spriteRenderer.sprite = ViewModel.GetSprite(SubstanceId.Vacuum);
+            _spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+            _spriteRenderer.sprite = ViewModel.GetSprite(SubstanceId.Vacuum);
         }
     }
 }

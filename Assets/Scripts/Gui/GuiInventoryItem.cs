@@ -1,18 +1,16 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Assets.Scripts.Gui
 {
-    public class GuiInventoryItem : MonoBehaviour {
+    public class GuiInventoryItem : MonoBehaviour
+    {
+        public int InventoryId;
 
-        public Sprite mainSprite;
-        public int inventoryId;
+        public Sprite MainSprite;
 
-        // Start
-        void Start() {
-            name = "GuiInventoryItem " + inventoryId;
+        private void Start()
+        {
+            name = "GuiInventoryItem " + InventoryId;
         }
-
     }
 }
