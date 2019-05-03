@@ -1,28 +1,21 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Assets.Scripts.Gui
 {
-
-    public class GuiGuageController : GuiArtefactController
+    public class GuiGuageController : GuiArtifactController
     {
-
-        ///// Variables
-
-        [Range (0, 1)] public float fill;
-        public bool broken = false;
-        public RuntimeAnimatorController guageController;
-        public Sprite backgroundSprite;
-
-        private GameObject _backgroundGO;
-        private SpriteRenderer _spriteRenderer;
-        private SpriteRenderer _backgroundSpriteRenderer;
         private Animator _animator;
 
+        private GameObject _backgroundGo;
+        private SpriteRenderer _backgroundSpriteRenderer;
+        private SpriteRenderer _spriteRenderer;
+        public Sprite BackgroundSprite;
+        public bool Broken = false;
+        [Range(0, 1)] public float fill;
+        public RuntimeAnimatorController GaugeController;
+
         ///// Functions
-        
+
 
         /*
         public float GetFill() { return fill; }
@@ -32,29 +25,31 @@ namespace Assets.Scripts.Gui
 
         ///// MonoBehaviour
         // Start
-        void Start() {
-            _backgroundGO = new GameObject("background");
-            _backgroundGO.transform.SetParent(this.gameObject.transform);
-            _backgroundGO.transform.localPosition = Vector3.zero;
-            _backgroundSpriteRenderer = _backgroundGO.gameObject.AddComponent<SpriteRenderer>();
+        private void Start()
+        {
+            _backgroundGo = new GameObject("background");
+            _backgroundGo.transform.SetParent(gameObject.transform);
+            _backgroundGo.transform.localPosition = Vector3.zero;
+            _backgroundSpriteRenderer = _backgroundGo.gameObject.AddComponent<SpriteRenderer>();
             _backgroundSpriteRenderer.sortingLayerName = "gui";
             _backgroundSpriteRenderer.sortingOrder = 0;
-            _backgroundSpriteRenderer.sprite = backgroundSprite;
+            _backgroundSpriteRenderer.sprite = BackgroundSprite;
 
-            _spriteRenderer = this.gameObject.AddComponent<SpriteRenderer>();
+            _spriteRenderer = gameObject.AddComponent<SpriteRenderer>();
             _spriteRenderer.sortingLayerName = "gui";
             _spriteRenderer.sortingOrder = 1;
 
-            _animator = this.gameObject.AddComponent<Animator>();
-            _animator.runtimeAnimatorController = guageController;
+            _animator = gameObject.AddComponent<Animator>();
+            _animator.runtimeAnimatorController = GaugeController;
 
             SwitchOn();
         }
 
         // Update
-        void Update() {
-            _animator.SetFloat("fill", Mathf.Clamp(fill,0f,0.999f));
-            _animator.SetBool("broken", broken);
+        private void Update()
+        {
+            _animator.SetFloat("fill", Mathf.Clamp(fill, 0f, 0.999f));
+            _animator.SetBool("broken", Broken);
         }
     }
 }
