@@ -18,6 +18,7 @@ namespace Assets.Scripts.InternalMath
         LEFT
     }
 
+<<<<<<< HEAD
     public enum SubstanceId {
         Vacuum,
         Air,
@@ -30,6 +31,10 @@ namespace Assets.Scripts.InternalMath
     }
 
 
+=======
+    
+    ///// static MyMath class
+>>>>>>> parent of ab06775... Refactor
     public static class MyMath
     {
         public static NodeDirections ReverseDirection(NodeDirections outDirection)

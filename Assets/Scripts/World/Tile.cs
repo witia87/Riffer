@@ -14,10 +14,16 @@ namespace Assets.Scripts.World
         public int Column { get; }
         public SubstanceId Substance { get;  set; }
 
+<<<<<<< HEAD
         //private Tile[] node;
 
         ///// Constructors
         public Tile(int row, int column, SubstanceId substance)
+=======
+        ///// Constructors
+
+        public Tile(int column, int row, SubstanceId substance)
+>>>>>>> parent of ab06775... Refactor
         {
             Row = row;
             Column = column;
@@ -34,6 +40,7 @@ namespace Assets.Scripts.World
         }
 
         ///// Functions
+<<<<<<< HEAD
         /*
         public void MakeNodeConnection(Tile other, NodeDirections direction)
         {
@@ -44,6 +51,10 @@ namespace Assets.Scripts.World
 
         public void AddForce() { }
         */
+=======
+
+        // Substance swap
+>>>>>>> parent of ab06775... Refactor
         public void SwapSubstances(Tile other)
         {
             Debug.Log(Substance+" swapped to "+ other.Substance);

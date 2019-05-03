@@ -1,5 +1,11 @@
+<<<<<<< HEAD
 ﻿using System.Collections;
 using System.Collections.Generic;
+=======
+﻿using System;
+using System.Collections.Generic;
+using System.Collections;
+>>>>>>> parent of ab06775... Refactor
 using UnityEngine;
 
 
@@ -28,12 +34,29 @@ namespace Assets.Scripts.World
         Permanent
     }
 
+<<<<<<< HEAD
+=======
+    [Serializable]
+    public struct Substance
+    {
+        public SubstanceId id;
+        public SubstanceState state;
+        public float ro;
+        public Sprite sprite;
+        
+    }
+
+>>>>>>> parent of ab06775... Refactor
     public class SubstancesManager : MonoBehaviour
     {
         // Start is called before the first frame update
         void Start()
         {
+<<<<<<< HEAD
 
+=======
+           
+>>>>>>> parent of ab06775... Refactor
         }
 
         // Update is called once per frame
