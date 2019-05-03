@@ -1,8 +1,8 @@
 ﻿using Assets.Scripts.World;
 
-namespace Assets.Scripts.Mechanics
+namespace Assets.Scripts.Systems
 {
-    public abstract class CellularMechanics
+    public abstract class Mechanics
     {
         public abstract void Apply(Board board);
     }

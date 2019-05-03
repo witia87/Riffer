@@ -1,12 +1,20 @@
+﻿
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-﻿using Assets.Scripts.World.Substances;
 
 namespace Assets.Scripts.World
 {
     public class Tile
     {
+        ///// Variables
+        public int Row { get; }
+        public int Column { get; }
+        public SubstanceId Substance { get;  set; }
+
+        ///// Constructors
+
         public Tile(int column, int row, SubstanceId substance)
         {
             Row = row;
@@ -21,16 +29,16 @@ namespace Assets.Scripts.World
             Substance = otherTile.Substance;
         }
 
-        public int Row { get; }
-        public int Column { get; }
-        public SubstanceId Substance { get; set; }
+        ///// Functions
 
+        // Substance swap
         public void SwapSubstances(Tile other)
         {
             //Debug.Log(Substance+" swapped to "+ other.Substance+" @"+column+"/"+row);
             var newSubstanceId = other.Substance;
-            other.Substance = Substance;
+            other.Substance = this.Substance;
             Substance = newSubstanceId;
+
         }
     }
 }

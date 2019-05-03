@@ -1,20 +1,27 @@
-﻿using Assets.Scripts.World;
-using Assets.Scripts.World.Substances;
+﻿using System;
+using UnityEngine;
+using Assets.Scripts.World;
 
-namespace Assets.Scripts.Mechanics
+namespace Assets.Scripts.Systems
 {
-    public class Wind : CellularMechanics
+    public class Wind: Mechanics
     {
-        private readonly HorizontalDirection _windDirection = HorizontalDirection.Right;
-        private readonly float _windStrength = 1;
-        private Board _currentBoard;
 
+        ///// Variables
+        private float uniformWind = 0;
+        private Board currentBoard = null;
+
+        ///// Functions
+
+        // Mechanics.Apply abstract override
         public override void Apply(Board board)
         {
-            _currentBoard = board;
-            board.ForEach(ApplyForTile, VerticalDirection.Up, _windDirection);
+            currentBoard = board;
+            uniformWind = BoardManager.Instance.GetCurrentWind();
+            board.ForEachWind(ApplyForTile, uniformWind);
         }
 
+        // Single tile mechanics
         private void ApplyForTile(Tile tile)
         {
 

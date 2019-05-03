@@ -112,24 +112,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &877837316 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4171561023289061939, guid: bf1b8bf30482f9c41894f0db8d71a5a5,
-    type: 3}
-  m_PrefabInstance: {fileID: 1909022296}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &877837321
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 877837316}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd050f5ed8411c5488800a77f3590984, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1909022296
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -137,11 +119,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4171561023289061939, guid: bf1b8bf30482f9c41894f0db8d71a5a5,
-        type: 3}
-      propertyPath: m_Name
-      value: GameRunner
-      objectReference: {fileID: 0}
     - target: {fileID: 2636825619345268178, guid: bf1b8bf30482f9c41894f0db8d71a5a5,
         type: 3}
       propertyPath: m_Name
@@ -202,19 +179,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4171561023289061949, guid: bf1b8bf30482f9c41894f0db8d71a5a5,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4171561023289061948, guid: bf1b8bf30482f9c41894f0db8d71a5a5,
-        type: 3}
-      propertyPath: _tileViewPrefab
-      value: 
-      objectReference: {fileID: 828180708163397772, guid: 15ec75ecc599d664b99621814a49fe40,
-        type: 3}
-    m_RemovedComponents:
-    - {fileID: 4171561023289061951, guid: bf1b8bf30482f9c41894f0db8d71a5a5, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf1b8bf30482f9c41894f0db8d71a5a5, type: 3}
 --- !u!1001 &4465112911966682994
 PrefabInstance:

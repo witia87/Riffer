@@ -1,51 +1,75 @@
 ﻿using System;
+using UnityEngine;
 
 namespace Assets.Scripts.World
 {
     public class Board
     {
-        public static Board Current;
-        private readonly Tile[,] _tiles;
 
-        public readonly int Columns = 64;
-        public readonly int Rows = 40;
+        ///// Variables
+        
+        private int Columns;
+        private int Rows;
+        private Tile[,] _tiles;
 
-        public Board(Tile[,] tiles)
+        ///// Constructors
+
+        public Board(Tile[,] tileArray)
         {
-            Columns = tiles.GetLength(0);
-            Rows = tiles.GetLength(1);
-            _tiles = tiles;
-        }
-
-        public Tile GetTile(int column, int row)
-        {
-            return _tiles[(column + Columns) % Columns, row];
-        }
-
-        public int GetBoardDimensions(int index)
-        {
-            return _tiles.GetLength(index);
-        }
-
-        public void ForEach(Action<Tile> action, VerticalDirection verticalDirection,
-            HorizontalDirection horizontalDirection)
-        {
-            if (verticalDirection == VerticalDirection.Up)
-                for (var row = Rows - 1; row > 0; row--)
-                    ForEachInRow(row, action, horizontalDirection);
-            else if (verticalDirection == VerticalDirection.Down)
-                for (var row = Rows - 1; row > 0; row--)
-                    ForEachInRow(row, action, horizontalDirection);
-        }
-
-        private void ForEachInRow(int row, Action<Tile> action, HorizontalDirection horizontalDirection)
-        {
-            if (horizontalDirection == HorizontalDirection.Right)
+            Debug.Log("Board constructor :: [" + tileArray.GetLength(0)+"/"+tileArray.GetLength(1)+"]");
+            Columns = tileArray.GetLength(0);
+            Rows = tileArray.GetLength(1);
+            _tiles = new Tile[Columns, Rows];
+            for (var row = 0; row < Rows; row++)
+            {
                 for (var column = 0; column < Columns; column++)
+                {
+                    _tiles[column, row] = tileArray[column, row];
+                }
+            }
+        }
+
+        ///// Functions
+
+        // Gets
+        public Tile GetTile(int column, int row) { return _tiles[(column + Columns) % Columns, row]; }
+        public int GetBoardDimensions(int index) { return _tiles.GetLength(index); }
+
+        // Simple run-through (LowerLeft » UpperRight)
+        public void ForEach(Action<Tile> action)
+        {
+            for (var row = 0; row < Rows; row++)
+            {
+                for (var column = 0; column < Columns; column++)
+                {
                     action(_tiles[column, row]);
-            else if (horizontalDirection == HorizontalDirection.Left)
-                for (var column = Columns - 1; column >= 0; column--)
-                    action(_tiles[column, row]);
+                }
+            }
+        }
+
+        // Falling run-through (UpperLeft » LowerRight)
+        public void ForEachWind(Action<Tile> action, float wind)
+        {
+            if (wind > 0)
+            {
+                for (var row = Rows - 1; row > 0; row--)
+                {
+                    for (var column = Columns - 1 ; column >= 0; column--)
+                    {
+                        action(_tiles[column, row]);
+                    }
+                }
+            }
+            else if (wind < 0)
+            {
+                for (var row = Rows - 1; row > 0; row--)
+                {
+                    for (var column = 0; column < Columns; column++)
+                    {
+                        action(_tiles[column, row]);
+                    }
+                }
+            }
         }
     }
 }
