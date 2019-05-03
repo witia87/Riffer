@@ -10,12 +10,11 @@ namespace Assets.Scripts.World
     public class BoardManager : MonoBehaviour
     {
 
-
         ///// Variables
 
         public static BoardManager Instance = null;
 
-        [SerializeField] private float _currentWind = 0.0f;
+        [SerializeField] [Range(-5,5)] private float _currentWind = 0.0f;
 
         private int BOARD_COLUMNS;
         private int BOARD_ROWS;
@@ -53,7 +52,7 @@ namespace Assets.Scripts.World
         }
 
 
-        // Initialize Board
+        // Initialize Board From String
         public void InitializeTestBoardFromString(String boardSavedAsAlphanumericCode)
         {
             BOARD_COLUMNS = 64;

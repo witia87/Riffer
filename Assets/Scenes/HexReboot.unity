@@ -261,10 +261,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4171561023289061951, guid: bf1b8bf30482f9c41894f0db8d71a5a5,
+    - target: {fileID: 4171561023289061938, guid: bf1b8bf30482f9c41894f0db8d71a5a5,
         type: 3}
-      propertyPath: _currentWind
-      value: -1
+      propertyPath: timeAngle
+      value: 720
+      objectReference: {fileID: 0}
+    - target: {fileID: 4171561023289061938, guid: bf1b8bf30482f9c41894f0db8d71a5a5,
+        type: 3}
+      propertyPath: worldRotationPerBeat
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf1b8bf30482f9c41894f0db8d71a5a5, type: 3}

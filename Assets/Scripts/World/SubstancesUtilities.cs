@@ -39,18 +39,7 @@ namespace Assets.Scripts.World
         
     }
 
-    public class SubstancesManager : MonoBehaviour
+    public static class SubstancesUtilities
     {
-        // Start is called before the first frame update
-        void Start()
-        {
-           
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-
-        }
     }
 }
