@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEditor;
 
 public class GuiArtefactController : MonoBehaviour
 {
@@ -18,9 +19,6 @@ public class GuiArtefactController : MonoBehaviour
     public bool ToggleOnOff() { return _on = !_on; }
     public void SwitchOn() { _on = true; }
     public void SwitchOff() { _on = false; }
-    public void SetOnOffStatus(bool newOnOffStatus) { _on = newOnOffStatus; }
-
-    public void SetToBroken() { _broken = true; }
-    public void SetToNotbroken() { _broken = false; }
-    public void SetBrokenStatus(bool newBrokenStatus) { _broken = newBrokenStatus; }
+    public void SetBroken() { _broken = true; }
+    public void SetNotbroken() { _broken = false; }
 }

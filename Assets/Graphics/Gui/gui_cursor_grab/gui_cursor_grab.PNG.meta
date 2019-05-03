@@ -1,9 +1,9 @@
 fileFormatVersion: 2
-guid: b82039b706ea91448a612505d48a7fdb
+guid: 1fddd310f3c486247a2463de5a423388
 TextureImporter:
   fileIDToRecycleName:
-    21300000: gui_cursor_deny_0
-    21300002: gui_cursor_deny_1
+    21300000: gui_cursor_grab_0
+    21300002: gui_cursor_grab_1
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 0
   alphaUsage: 1
@@ -97,7 +97,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: gui_cursor_deny_0
+      name: gui_cursor_grab_0
       rect:
         serializedVersion: 2
         x: 0
@@ -111,13 +111,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: beb5383b29dd05446bb4a5970ef8bcbb
+      spriteID: 49f18b48b4669d94abd79f1d5d76444e
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: gui_cursor_deny_1
+      name: gui_cursor_grab_1
       rect:
         serializedVersion: 2
         x: 32
@@ -131,7 +131,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3432392d52aa4f94eb916d3269f3e6e6
+      spriteID: aedab57ea3f330a47a1f540d66e64c8e
       vertices: []
       indices: 
       edges: []
@@ -139,7 +139,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: d159fabdbf469bb4f833c2e69239938e
+    spriteID: a1ccfa5ff99706c40a8a2d389756512d
     vertices: []
     indices: 
     edges: []

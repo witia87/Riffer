@@ -30,9 +30,7 @@ namespace Assets.Scripts.Systems
                 Tile lowerRightTile = currentBoard.GetTile(tile.Column + tile.Row % 2, tile.Row - 1);
                 Tile downTile = currentBoard.GetTile(tile.Column, tile.Row - 2);
 
-                if (lowerLeftTile.Substance == SubstanceId.Atmo && 
-                    lowerRightTile.Substance == SubstanceId.Atmo && 
-                    downTile.Substance == SubstanceId.Atmo)
+                if (lowerLeftTile.Substance == SubstanceId.Atmo && lowerRightTile.Substance == SubstanceId.Atmo && downTile.Substance == SubstanceId.Atmo)
                 {
                     downTile.SwapSubstances(tile);
                 }
