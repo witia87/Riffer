@@ -1,10 +1,13 @@
 ﻿using System;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 =======
+=======
+>>>>>>> parent of ab06775... Refactor
 =======
 >>>>>>> parent of ab06775... Refactor
 using System.IO;
@@ -13,6 +16,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using Assets.Scripts.Views;
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of ab06775... Refactor
+=======
 >>>>>>> parent of ab06775... Refactor
 =======
 >>>>>>> parent of ab06775... Refactor
@@ -22,6 +28,7 @@ namespace Assets.Scripts.World
     public class BoardManager : MonoBehaviour
     {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         public static BoardManager Instance = null;
@@ -51,6 +58,8 @@ namespace Assets.Scripts.World
             BoardBag = new GameObject();
             BoardBag.name = "BoardBag";
 =======
+=======
+>>>>>>> parent of ab06775... Refactor
 =======
 >>>>>>> parent of ab06775... Refactor
 
@@ -107,6 +116,9 @@ namespace Assets.Scripts.World
             BoardTilesBag = new GameObject();
             BoardTilesBag.name = "BoardTilesBag";
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of ab06775... Refactor
+=======
 >>>>>>> parent of ab06775... Refactor
 =======
 >>>>>>> parent of ab06775... Refactor
@@ -115,6 +127,7 @@ namespace Assets.Scripts.World
                 for (var column = 0; column < BOARD_COLUMNS; column++) {
                     // Substance definer
                     int _tempStringIndex = ((BOARD_ROWS - 1 - row) * (BOARD_COLUMNS)) + column;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                     SubstanceId _tempSubstance = (SubstanceId)(boardSavedAsAlphanumericCode[_tempStringIndex]-48);
@@ -147,6 +160,8 @@ namespace Assets.Scripts.World
         {
             _currentBoard = new Board(_tiles);
 =======
+=======
+>>>>>>> parent of ab06775... Refactor
 =======
 >>>>>>> parent of ab06775... Refactor
                     SubstanceId substanceFromBoardSavedAsAlphanumericCode = (SubstanceId)int.Parse(boardSavedAsAlphanumericCode.Substring(_tempStringIndex, 1));
@@ -190,6 +205,9 @@ namespace Assets.Scripts.World
         {
             // Debug.Log("redrawing _tileViews[" + _tileViews.GetLength(0) + "/"+ _tileViews.GetLength(1) + "] of BOARD["+ BOARD_COLUMNS +"/"+ BOARD_ROWS + "]");
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of ab06775... Refactor
+=======
 >>>>>>> parent of ab06775... Refactor
 =======
 >>>>>>> parent of ab06775... Refactor
@@ -197,6 +215,7 @@ namespace Assets.Scripts.World
             {
                 for (var column = 0; column < BOARD_COLUMNS; column++)
                 {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                     _tileViews[column, row].RefreshSubstanceView(_tiles[column, row].Substance);
@@ -207,6 +226,8 @@ namespace Assets.Scripts.World
 
         ///// MonoBehaviour
 =======
+=======
+>>>>>>> parent of ab06775... Refactor
 =======
 >>>>>>> parent of ab06775... Refactor
                     //Debug.Log("geting "+column+"/"+row+" ."+ _currentBoard.GetTile(column, row).Substance);
@@ -221,6 +242,9 @@ namespace Assets.Scripts.World
 
         // Awake
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of ab06775... Refactor
+=======
 >>>>>>> parent of ab06775... Refactor
 =======
 >>>>>>> parent of ab06775... Refactor

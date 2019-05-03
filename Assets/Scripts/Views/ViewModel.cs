@@ -30,14 +30,25 @@ namespace Assets.Scripts.Views
             public Sprite sprite;
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of ab06775... Refactor
 
         ///// Variables
 =======
 
+<<<<<<< HEAD
         ///// Variables
+=======
+        public static ViewModel Instance = null;
+
+        [SerializeField] private SubstanceSprite[] _substanceSprites = null;
+        [SerializeField] private GameObject TileViewPrefab = null;
+>>>>>>> parent of ab06775... Refactor
 
         public static ViewModel Instance = null;
 
+<<<<<<< HEAD
         [SerializeField] private SubstanceSprite[] _substanceSprites = null;
         [SerializeField] private GameObject TileViewPrefab = null;
 >>>>>>> parent of ab06775... Refactor
@@ -65,6 +76,11 @@ namespace Assets.Scripts.Views
 
         // Sprite grabber from dictionary
 >>>>>>> parent of ab06775... Refactor
+=======
+        ///// Functions
+
+        // Sprite grabber from dictionary
+>>>>>>> parent of ab06775... Refactor
         public static Sprite GetSprite(SubstanceId id)
         {
             return _spritesDictionary[id];
@@ -72,7 +88,10 @@ namespace Assets.Scripts.Views
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of ab06775... Refactor
 =======
 >>>>>>> parent of ab06775... Refactor
         // Tile prefab grabber
@@ -84,6 +103,9 @@ namespace Assets.Scripts.Views
 
         // Initialize Sprite dictionary
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of ab06775... Refactor
+=======
 >>>>>>> parent of ab06775... Refactor
 =======
 >>>>>>> parent of ab06775... Refactor
@@ -97,8 +119,11 @@ namespace Assets.Scripts.Views
         }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     }*/
 =======
+=======
+>>>>>>> parent of ab06775... Refactor
 =======
 >>>>>>> parent of ab06775... Refactor
 

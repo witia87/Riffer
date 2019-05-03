@@ -9,9 +9,12 @@ namespace Assets.Scripts.Systems
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         private Board currentBoard = null;
 
 =======
+=======
+>>>>>>> parent of ab06775... Refactor
 =======
 >>>>>>> parent of ab06775... Refactor
         ///// Variables
@@ -21,6 +24,9 @@ namespace Assets.Scripts.Systems
 
         // Mechanics.Apply abstract override
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of ab06775... Refactor
+=======
 >>>>>>> parent of ab06775... Refactor
 =======
 >>>>>>> parent of ab06775... Refactor
@@ -30,6 +36,7 @@ namespace Assets.Scripts.Systems
             board.ForEach(ApplyForTile);
         }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         private void ApplyForTile(Tile tile)
@@ -42,6 +49,8 @@ namespace Assets.Scripts.Systems
                     otherTile.SwapSubstances(tile);
                     Debug.Log("Swaped " + tile.Column + "/" + tile.Row + " " + tile.Substance + " » " + otherTile.Column + "/" + otherTile.Row + " " + otherTile.Substance );
 =======
+=======
+>>>>>>> parent of ab06775... Refactor
 =======
 >>>>>>> parent of ab06775... Refactor
         // Single tile mechanics
@@ -67,6 +76,9 @@ namespace Assets.Scripts.Systems
                 {
                     lowerRightTile.SwapSubstances(tile);
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of ab06775... Refactor
+=======
 >>>>>>> parent of ab06775... Refactor
 =======
 >>>>>>> parent of ab06775... Refactor
@@ -77,7 +89,10 @@ namespace Assets.Scripts.Systems
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> parent of ab06775... Refactor
 =======
 >>>>>>> parent of ab06775... Refactor
 =======
