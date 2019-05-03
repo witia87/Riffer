@@ -13,6 +13,7 @@ public class GuiArtefactController : MonoBehaviour
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     // basic switches
     public bool OnOffChceck() { return _on; }
     public bool SwitchOn() { return _on = true; }
@@ -21,6 +22,8 @@ public class GuiArtefactController : MonoBehaviour
     public bool DeclareBroken() { return _broken = true; }
     public bool DeclareUnbroken() { return _broken = false; }
 =======
+=======
+>>>>>>> parent of ab06775... Refactor
 =======
 >>>>>>> parent of ab06775... Refactor
 =======
@@ -38,6 +41,9 @@ public class GuiArtefactController : MonoBehaviour
     public void SetNotbroken() { _broken = false; }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of ab06775... Refactor
+=======
 >>>>>>> parent of ab06775... Refactor
 =======
 >>>>>>> parent of ab06775... Refactor

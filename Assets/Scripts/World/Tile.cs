@@ -17,11 +17,14 @@ namespace Assets.Scripts.World
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         //private Tile[] node;
 
         ///// Constructors
         public Tile(int row, int column, SubstanceId substance)
 =======
+=======
+>>>>>>> parent of ab06775... Refactor
 =======
 >>>>>>> parent of ab06775... Refactor
 =======
@@ -49,6 +52,7 @@ namespace Assets.Scripts.World
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         /*
         public void MakeNodeConnection(Tile other, NodeDirections direction)
         {
@@ -59,6 +63,10 @@ namespace Assets.Scripts.World
 
         public void AddForce() { }
         */
+=======
+
+        // Substance swap
+>>>>>>> parent of ab06775... Refactor
 =======
 
         // Substance swap

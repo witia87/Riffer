@@ -2,10 +2,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 =======
+=======
+>>>>>>> parent of ab06775... Refactor
 =======
 >>>>>>> parent of ab06775... Refactor
 =======
@@ -17,6 +20,9 @@ using UnityEngine;
 using Assets.Scripts.Views;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of ab06775... Refactor
+=======
 >>>>>>> parent of ab06775... Refactor
 =======
 >>>>>>> parent of ab06775... Refactor
@@ -28,6 +34,7 @@ namespace Assets.Scripts.World
     public class BoardManager : MonoBehaviour
     {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -58,6 +65,8 @@ namespace Assets.Scripts.World
             BoardBag = new GameObject();
             BoardBag.name = "BoardBag";
 =======
+=======
+>>>>>>> parent of ab06775... Refactor
 =======
 >>>>>>> parent of ab06775... Refactor
 =======
@@ -117,6 +126,9 @@ namespace Assets.Scripts.World
             BoardTilesBag.name = "BoardTilesBag";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of ab06775... Refactor
+=======
 >>>>>>> parent of ab06775... Refactor
 =======
 >>>>>>> parent of ab06775... Refactor
@@ -127,6 +139,7 @@ namespace Assets.Scripts.World
                 for (var column = 0; column < BOARD_COLUMNS; column++) {
                     // Substance definer
                     int _tempStringIndex = ((BOARD_ROWS - 1 - row) * (BOARD_COLUMNS)) + column;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -160,6 +173,8 @@ namespace Assets.Scripts.World
         {
             _currentBoard = new Board(_tiles);
 =======
+=======
+>>>>>>> parent of ab06775... Refactor
 =======
 >>>>>>> parent of ab06775... Refactor
 =======
@@ -206,6 +221,9 @@ namespace Assets.Scripts.World
             // Debug.Log("redrawing _tileViews[" + _tileViews.GetLength(0) + "/"+ _tileViews.GetLength(1) + "] of BOARD["+ BOARD_COLUMNS +"/"+ BOARD_ROWS + "]");
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of ab06775... Refactor
+=======
 >>>>>>> parent of ab06775... Refactor
 =======
 >>>>>>> parent of ab06775... Refactor
@@ -218,6 +236,7 @@ namespace Assets.Scripts.World
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                     _tileViews[column, row].RefreshSubstanceView(_tiles[column, row].Substance);
                 }
             }
@@ -226,6 +245,8 @@ namespace Assets.Scripts.World
 
         ///// MonoBehaviour
 =======
+=======
+>>>>>>> parent of ab06775... Refactor
 =======
 >>>>>>> parent of ab06775... Refactor
 =======
@@ -243,6 +264,9 @@ namespace Assets.Scripts.World
         // Awake
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of ab06775... Refactor
+=======
 >>>>>>> parent of ab06775... Refactor
 =======
 >>>>>>> parent of ab06775... Refactor
