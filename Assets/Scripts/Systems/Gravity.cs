@@ -8,15 +8,21 @@ namespace Assets.Scripts.Systems
     {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         private Board currentBoard = null;
 
 =======
+=======
+>>>>>>> parent of ab06775... Refactor
         ///// Variables
         private Board currentBoard = null;
 
         ///// Functions
 
         // Mechanics.Apply abstract override
+<<<<<<< HEAD
+>>>>>>> parent of ab06775... Refactor
+=======
 >>>>>>> parent of ab06775... Refactor
         public override void Apply(Board board)
         {
@@ -24,6 +30,7 @@ namespace Assets.Scripts.Systems
             board.ForEach(ApplyForTile);
         }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         private void ApplyForTile(Tile tile)
         {
@@ -35,6 +42,8 @@ namespace Assets.Scripts.Systems
                     otherTile.SwapSubstances(tile);
                     Debug.Log("Swaped " + tile.Column + "/" + tile.Row + " " + tile.Substance + " » " + otherTile.Column + "/" + otherTile.Row + " " + otherTile.Substance );
 =======
+=======
+>>>>>>> parent of ab06775... Refactor
         // Single tile mechanics
         private void ApplyForTile(Tile tile)
         {
@@ -57,6 +66,9 @@ namespace Assets.Scripts.Systems
                 else if (lowerRightTile.Substance == SubstanceId.Atmo)
                 {
                     lowerRightTile.SwapSubstances(tile);
+<<<<<<< HEAD
+>>>>>>> parent of ab06775... Refactor
+=======
 >>>>>>> parent of ab06775... Refactor
                 }
             }
@@ -64,7 +76,10 @@ namespace Assets.Scripts.Systems
 
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> parent of ab06775... Refactor
 =======
 >>>>>>> parent of ab06775... Refactor
 }

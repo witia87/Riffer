@@ -19,6 +19,7 @@ namespace Assets.Scripts.InternalMath
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public enum SubstanceId {
         Vacuum,
         Air,
@@ -31,6 +32,10 @@ namespace Assets.Scripts.InternalMath
     }
 
 
+=======
+    
+    ///// static MyMath class
+>>>>>>> parent of ab06775... Refactor
 =======
     
     ///// static MyMath class

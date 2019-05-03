@@ -29,11 +29,22 @@ namespace Assets.Scripts.Views
             public SubstanceId id;
             public Sprite sprite;
         }
+<<<<<<< HEAD
+
+        ///// Variables
+=======
 
         ///// Variables
 
         public static ViewModel Instance = null;
 
+        [SerializeField] private SubstanceSprite[] _substanceSprites = null;
+        [SerializeField] private GameObject TileViewPrefab = null;
+>>>>>>> parent of ab06775... Refactor
+
+        public static ViewModel Instance = null;
+
+<<<<<<< HEAD
         [SerializeField] private SubstanceSprite[] _substanceSprites = null;
         [SerializeField] private GameObject TileViewPrefab = null;
 >>>>>>> parent of ab06775... Refactor
@@ -49,13 +60,21 @@ namespace Assets.Scripts.Views
 
         // Sprite grabber from dictionary
 >>>>>>> parent of ab06775... Refactor
+=======
+        ///// Functions
+
+        // Sprite grabber from dictionary
+>>>>>>> parent of ab06775... Refactor
         public static Sprite GetSprite(SubstanceId id)
         {
             return _spritesDictionary[id];
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of ab06775... Refactor
         // Tile prefab grabber
         public GameObject GetTileViewPrefab()
         {
@@ -64,6 +83,9 @@ namespace Assets.Scripts.Views
 
 
         // Initialize Sprite dictionary
+<<<<<<< HEAD
+>>>>>>> parent of ab06775... Refactor
+=======
 >>>>>>> parent of ab06775... Refactor
         public void InitializeDictionary()
         {
@@ -74,8 +96,11 @@ namespace Assets.Scripts.Views
             }
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
     }*/
 =======
+=======
+>>>>>>> parent of ab06775... Refactor
 
         ///// MonoBehaviour
 

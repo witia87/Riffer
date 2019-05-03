@@ -1,6 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ﻿using System.Collections;
 using System.Collections.Generic;
+=======
+﻿using System;
+using System.Collections.Generic;
+using System.Collections;
+>>>>>>> parent of ab06775... Refactor
 =======
 ﻿using System;
 using System.Collections.Generic;
@@ -35,7 +41,10 @@ namespace Assets.Scripts.World
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of ab06775... Refactor
     [Serializable]
     public struct Substance
     {
@@ -46,6 +55,9 @@ namespace Assets.Scripts.World
         
     }
 
+<<<<<<< HEAD
+>>>>>>> parent of ab06775... Refactor
+=======
 >>>>>>> parent of ab06775... Refactor
     public class SubstancesManager : MonoBehaviour
     {
@@ -53,7 +65,11 @@ namespace Assets.Scripts.World
         void Start()
         {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+           
+>>>>>>> parent of ab06775... Refactor
 =======
            
 >>>>>>> parent of ab06775... Refactor
