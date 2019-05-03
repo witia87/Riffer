@@ -1,43 +1,39 @@
 ﻿using System;
-using Assets.Scripts;
+using UnityEngine;
 
 namespace Assets.Scripts.World
 {
-    public class Board
+    public class BoardView
     {
         public static int Columns = 64;
         public static int Rows = 40;
 
-        private Tile[,] _tiles = new Tile[Columns, Rows];
+        private TileView[,] _tileViews = new TileView[Columns, Rows];
 
-        public Board(Tile[,] tileArray)
+        public BoardView(TileView[,] tileArray)
         {
             for (var row = 0; row < Rows; row++)
             {
                 for (var column = 0; column < Columns; column++)
                 {
-                    _tiles[column, row] = tileArray[column, row];
+                    _tileViews[column, row] = tileArray[column, row];
                 }
             }
         }
         
-        public Board(Board otherBoard)
+
+        public TileView GetTileView(int column, int row)
         {
-            otherBoard.ForEach(tile => { _tiles[tile.Column, tile.Row] = new Tile(tile); });
+            return _tileViews[column, row];
         }
 
-        public Tile GetTile(int column, int row)
-        {
-            return _tiles[column, row];
-        }
-
-        public void ForEach(Action<Tile> action)
+        public void ForEach(Action<TileView> action)
         {
             for (var row = 0; row < Rows; row++)
             {
                 for (var column = 0; column < Columns; column++)
                 {
-                    action(_tiles[column, row]);
+                    action(_tileViews[column, row]);
                 }
             }
         }

@@ -5,41 +5,30 @@ using Assets.Scripts.World;
 
 
 namespace Assets.Scripts.Views
-{
+{/*
     public class ViewModel: MonoBehaviour
     {
+        public static BoardOLD Board;
+        private static Dictionary<SubstanceId, Sprite> _spritesDictionary;
+
         [Serializable]
         public struct SubstanceSprite
         {
             public SubstanceId id;
             public Sprite sprite;
         }
+        [SerializeField] private SubstanceSprite[] _substanceSprites;
 
-        ///// Variables
+        private void Start()
+        {
+            InitializeDictionary();
+        }
 
-        public static ViewModel Instance = null;
-
-        [SerializeField] private SubstanceSprite[] _substanceSprites = null;
-        [SerializeField] private GameObject TileViewPrefab = null;
-
-        private static Dictionary<SubstanceId, Sprite> _spritesDictionary;
-
-        ///// Functions
-
-        // Sprite grabber from dictionary
         public static Sprite GetSprite(SubstanceId id)
         {
             return _spritesDictionary[id];
         }
 
-        // Tile prefab grabber
-        public GameObject GetTileViewPrefab()
-        {
-            return TileViewPrefab;
-        }
-
-
-        // Initialize Sprite dictionary
         public void InitializeDictionary()
         {
             _spritesDictionary = new Dictionary<SubstanceId, Sprite>();
@@ -48,14 +37,5 @@ namespace Assets.Scripts.Views
                 _spritesDictionary.Add(substanceSprite.id, substanceSprite.sprite);
             }
         }
-
-        ///// MonoBehaviour
-
-        // Awake
-        private void Awake()
-        {
-            if (Instance == null) Instance = this;
-            InitializeDictionary();
-        }
-    }
+    }*/
 }

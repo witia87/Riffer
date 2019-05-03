@@ -14,13 +14,16 @@ namespace Assets.Scripts.World
         public int Column { get; }
         public SubstanceId Substance { get;  set; }
 
-        ///// Constructors
+        //private Tile[] node;
 
-        public Tile(int column, int row, SubstanceId substance)
+        ///// Constructors
+        public Tile(int row, int column, SubstanceId substance)
         {
             Row = row;
             Column = column;
             Substance = substance;
+            //node = new Tile[7];
+            //for (int i = 0; i < 7; i++) { node[i] = null; }
         }
 
         public Tile(Tile otherTile)
@@ -31,11 +34,19 @@ namespace Assets.Scripts.World
         }
 
         ///// Functions
+        /*
+        public void MakeNodeConnection(Tile other, NodeDirections direction)
+        {
+            node[(int)direction] = other;
+            other.node[7 - (int)direction] = this;
+        }
+        
 
-        // Substance swap
+        public void AddForce() { }
+        */
         public void SwapSubstances(Tile other)
         {
-            //Debug.Log(Substance+" swapped to "+ other.Substance+" @"+column+"/"+row);
+            Debug.Log(Substance+" swapped to "+ other.Substance);
             var newSubstanceId = other.Substance;
             other.Substance = this.Substance;
             Substance = newSubstanceId;
